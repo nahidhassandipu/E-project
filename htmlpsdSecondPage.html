@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PSD TO HTML</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style_for_psd.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/myscript.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<header class="header-class row">
+		<div class="text-left col-md-6">
+			<i class="fa fa-envelope"></i> nahid@gmail.com  
+			<i class="fa fa-phone pl-4"></i> 0123456789
+		</div>
+		<div class="text-right col-md-6">
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-google-plus"></i>
+			<i class="fa fa-instagram"></i>
+		</div>
+	</header>
+	<nav class="navbar navbar-default">
+  		<div class="container">
+	    	<div class="navbar-header">
+	    		<div class="my-logo-container">
+	    			<a class="navbar-brand my-logo" href="#Home"><img src="images/logo.png"></a>	
+		      	</div>
+		      	<div class="button-toggle">
+			      	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>                        
+			      	</button>
+		      	</div>      			
+    		</div>
+	    	<div class="collapse navbar-collapse" id="myNavbar">
+		      	<ul style="float: right;display: inline-block;"  class="nav navbar-nav navbar-left">
+			        <li><a href="index.html">Home</a></li>
+			        <li><a class="keep-focus" href="htmlpsdSecondPage.html">Products</a></li>
+			        <li><a href="product_page.html">Hot Deals</a></li>
+			        <li><a href="about.html">About</a></li>
+			        <li><a href="contact.html">Contact</a></li>
+		      	</ul>
+	    	</div>
+	    	<div class="header-icon">
+		    	<i class="fa fa-search"></i>
+		    	<i class="fa fa-user-secret"></i>
+		    	<i class="fa fa-shopping-cart"></i>
+	    	</div>
+	  	</div>
+	</nav>
+
+	<div style="margin-top: -20px;" class="container-fluid bg-grey">
+		<div class="row">
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 ml-0 mr-0 pr-0 pl-0">
+				<div style="text-align:left;height: auto;width: auto" class="thumbnail p-3">
+					<h3 style="padding-left: 10px"><b class="common-color">Categories</b></h3><br>
+					<a style="padding-left: 10px" href="#"><b>Man</b></a><br><br>
+					<a style="padding-left: 10px" href="#"><b>Women</b></a><br><br>
+					<a style="padding-left: 10px" href="#"><b>Childrens</b></a><br><br>
+					<a style="padding-left: 10px" href="#"><b>Hot Deals</b></a>
+				</div>
+				<div style="height: auto;width: auto" class="thumbnail p-3">
+					<h3 style="padding-left: 10px"><b class="common-color">Price Filter</b></h3><br>
+					<div style="width:auto;">
+  						<input style="width:100%;" type="range" min=0 max=120 step=1 value=50 id="range2">
+					</div>
+					<div style="color: white;font-weight: bold;width: 100%;" class="pt-3 mt-5 btn btn-larg btn-danger disabled" id="demo"></div>
+				</div>
+				<div style="height: auto;width: auto" class="thumbnail">
+					<div class="p-4">
+						<h3 class="common-color"><b>Choose Size</b></h3><br>
+						<label class="Checkboxes-container">small
+						  	<input type="checkbox" checked="checked">
+						  	<span class="checkmark"></span>
+						</label>
+						<label class="Checkboxes-container">Midum
+						  	<input type="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+						<label class="Checkboxes-container">Larg
+						  	<input type="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+						<label class="Checkboxes-container">XLarg
+						  	<input type="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
+				<div style="height: auto;width: auto" class="thumbnail">
+					<div class="p-4">
+						<h3 class="common-color"><b>Brands</b></h3><br>
+						<label class="Checkboxes-container">Reebock
+						  	<input type="checkbox" checked="checked">
+						  	<span class="checkmark"></span>
+						</label>
+						<label class="Checkboxes-container">Addidas
+						  	<input type="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+						<label class="Checkboxes-container">Nike
+						  	<input type="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+						<label class="Checkboxes-container">Active
+						  	<input type="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+				<div style="margin-top: -2.5%" class="container-fluid bg-grey text-center new-arival">
+					<h2><b class="common-color">OUR</b> PRODUCTS</h2><br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p><br><br>
+					<div class="pl-1 pr-1 row text-center">
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img1">		
+								<img class="pt-5 indexwow" src="images/jacket_no_1.png" alt="Reebok Track jacket for woman"></a><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>		
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img2">
+								<img class="pt-5 indexwow" src="images/jacket_no_2.png" alt="Reebok gray Track jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img3">
+								<img class="pt-5 indexwow" src="images/jacket_no_4.png" alt="Reebok Track red jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img3">
+								<img class="pt-5 indexwow" src="images/jacket_no_4.png" alt="Reebok Track red jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: -15% !important" class="container-fluid bg-grey text-center new-arival">
+					<div class="pl-1 pr-1 row text-center">
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img1">		
+								<img class="pt-5 indexwow" src="images/jacket_no_1.png" alt="Reebok Track jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>		
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img2">
+								<img class="pt-5 indexwow" src="images/jacket_no_2.png" alt="Reebok gray Track jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img3">
+								<img class="pt-5 indexwow" src="images/jacket_no_4.png" alt="Reebok Track red jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img3">
+								<img class="pt-5 indexwow" src="images/jacket_no_4.png" alt="Reebok Track red jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: -15% !important" class="container-fluid bg-grey text-center new-arival">
+					<div class="pl-1 pr-1 row text-center">
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img1">		
+								<img class="pt-5 indexwow" src="images/jacket_no_1.png" alt="Reebok Track jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>		
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img2">
+								<img class="pt-5 indexwow" src="images/jacket_no_2.png" alt="Reebok gray Track jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img3">
+								<img class="pt-5 indexwow" src="images/jacket_no_4.png" alt="Reebok Track red jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+							<div class="thumbnail images" id="img3">
+								<img class="pt-5 indexwow" src="images/jacket_no_4.png" alt="Reebok Track red jacket for woman"><br><br>
+								<div class="default-caption">
+									<p><strong>Reebok Track Jacket</strong></p>
+									<p><b class="common-color">100$</b></p>
+								</div>
+								<div class="hover-caption">
+									<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
+									<p>Sizes : x - m - l - xl</p>
+									<i style="color: #e94650" class="fa fa-circle"></i>
+									<i style="color: #43525d" class="fa fa-circle"></i>
+									<i style="color: #44c1ff" class="fa fa-circle"></i>
+									<i style="color: #2fdc7a" class="fa fa-circle"></i>
+									<hr style="width:60%;">
+									<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+									<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row p-1 m-1">
+						<div class="col-sm-12 dot-box-container">
+							<i class="fa fa-circle"></i>
+							<i class="fa fa-circle"></i>
+							<i class="fa fa-circle"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="background-color: white;" class="container-fluid">
+    	<div class="row">
+    		<div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mt-5">
+    			<img src="images/logo.png" alt="Company Logo"><br>
+    			<caption style="color: #35414c">Dipu c 2018, your copy right here</caption>
+    		</div>
+    		<div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mt-3">
+    			<h3>Payment Methods</h3>
+    			<a href="3"><img src="images/payment_pics.png"></a>
+    		</div>
+    		<div class="col-lg-2 col-sm-6 col-md-6 col-xs-12 mt-5 footer-info-link">
+    			<ul style="font-weight: bold;">
+    				<li><a href="#">about Us</a></li>
+    				<li><a href="#">contact Us</a></li>
+    				<li><a href="#">support</a></li>
+    			</ul>
+    		</div>
+    		<div class="col-lg-2 col-sm-6 col-md-6 col-xs-12 mt-5 footer-info-link">
+    			<ul style="font-weight: bold;">
+    				<li><a href="#">our feed</a></li>
+    				<li><a href="#">terms and condition</a></li>
+    				<li><a href="#">our privacy</a></li>
+    			</ul>
+    		</div>
+    		<div class="col-lg-2 col-sm-6 col-md-6 col-xs-12 mt-5 footer-info-link">
+    			<ul style="font-weight: bold;">
+    				<li><a href="#">join Us</a></li>
+    				<li><a href="#">live support</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </div>
+    <script>
+    	function rangeColor(input) {
+			var wrp = document.createElement('div');
+			var preBar = document.createElement('p');
+			var valueShow = document.getElementById("demo");
+			var getVal = function() {
+			    var val = input.clientWidth * input.value / input.max;
+			    valueShow.innerHTML = input.value + "$";
+			    if (input.value <= 20) {
+			        valueShow.innerHTML = 21 + "$";
+			        alert("Sorry but you cannot negotiate the price of this product below " + valueShow.innerHTML + " Thank you");
+			    }
+			    return val;
+			};
+			wrp.className = 'barCnt';
+			preBar.className = 'preBar';
+			input.className = 'colorized';
+			input.parentNode.replaceChild(wrp, input);
+			wrp.appendChild(input);
+			wrp.appendChild(preBar);
+			input.addEventListener('input', function() {
+			  preBar.style.width = getVal() + 'px';
+			});
+			preBar.style.width = getVal() + 'px';
+	    }
+	    rangeColor(document.getElementById('range2'));
+	    
+    	$(document).ready(function() {
+    		$("img.indexwow").click(function(){
+	    		var getImg = $(this).attr('src');
+	        	localStorage.setItem("myImg", getImg);
+	        	window.open("product_page.html", "_self");	
+    		});
+    	});
+
+    </script>
+</body>
+</html>
