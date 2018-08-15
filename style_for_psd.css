@@ -33,6 +33,38 @@ header {
 	margin-bottom: 0px;
 	border-bottom: 1px solid #f5f5f7;
 }
+i.fa-facebook:hover {
+	color: #4352EB !important;
+	cursor: pointer;
+}
+i.fa-twitter:hover {
+	color: skyblue !important;
+	cursor: pointer;
+}
+i.fa-google-plus:hover {
+	color: #cc5953 !important;
+	cursor: pointer;
+}
+i.fa-instagram:hover {
+	color: #fb3958 !important;
+	cursor: pointer;
+}
+i.fa-globe:hover, i.fa-heart-o:hover, i.fa-shopping-cart:hover {
+	color: #ff7013 !important;
+	cursor: pointer;
+}
+div.header-icon span.cart-input {
+	height: 17px;
+	border-radius: 50%;
+	background-color: #a5482c;
+	color: white;
+	font-weight: bold;
+	display: none;
+	position: absolute;
+	top: -11px;
+	right: 10px;
+	padding: 0 3px 0 3px;
+}
 .my-logo-container {
 	position: absolute;
 	top: 1%;
@@ -116,6 +148,11 @@ header {
 	 	grid-column-start: 1;
   		grid-column-end: 3;
 	}
+	#my-text {
+		position: absolute;
+	    top : 20px;
+	    left: 14% !important;
+	}
 }
 @media (max-width: 410px) {
 	.image-container .content h1 {
@@ -126,6 +163,11 @@ header {
 	}
 	.image-container img, .Darken-background {
 		height: 300px !important;
+	}
+	#my-text {
+		position: absolute;
+	    top : 20px;
+	    left: 22% !important;
 	}
 }
 header .text-right {
@@ -231,15 +273,81 @@ header .text-right i {
 .grid-container > div {
 	padding: 20px;
 }
+.rotate-guy-text {
+	-webkit-animation-name: textof; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: infinate; /* Safari 4.0 - 8.0 */
+    animation-name: textof;
+    animation-duration: 0.7s;
+    -webkit-animation: textof 0.7s infinite; /* Safari 4.0 - 8.0 */
+    animation: textof 0.7s infinite;
+}
+
+@-webkit-keyframes textof {
+    0% 	{
+    	-ms-transform: rotate(0deg) !important;
+		-webkit-transform: rotate(0deg) !important;
+    	transform: rotate(0deg) !important;
+    	font-size: 10px;
+    }
+    100% 	{
+    	-ms-transform: rotate(0deg) !important;
+		-webkit-transform: rotate(0deg) !important;
+    	transform: rotate(0deg) !important;
+    	font-size: 20px;
+    }
+}
+@keyframes textof {
+    0% 	{
+    	-ms-transform: rotate(0deg) !important;
+		-webkit-transform: rotate(0deg) !important;
+    	transform: rotate(0deg) !important;
+    	font-size: 10px;
+    }
+    100% 	{
+    	-ms-transform: rotate(0deg) !important;
+		-webkit-transform: rotate(0deg) !important;
+    	transform: rotate(0deg) !important;
+    	font-size: 20px;
+    }
+}
+.rotate-guy {
+	-webkit-animation-name: rotating; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: infinate; /* Safari 4.0 - 8.0 */
+    animation-name: rotating;
+    -webkit-animation: rotating 4s infinite; /* Safari 4.0 - 8.0 */
+    animation: rotating 4s infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotating {
+    from 	{
+    	-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+    	transform: rotate(45deg);
+    }
+    to {
+    	-ms-transform: rotate(405deg);
+    	-webkit-transform: rotate(405deg);
+    	transform: rotate(405deg);
+	}
+}
+@keyframes rotating {
+    from 	{
+    	-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+    	transform: rotate(45deg);
+    }
+    to {
+    	-ms-transform: rotate(405deg);
+    	-webkit-transform: rotate(405deg);
+    	transform: rotate(405deg);
+	}
+}
 .grid-container .side-text .rotate-guy {
 	width: 50px;
     height: 57px;
     background-color: #ff7013;
     position: relative;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    margin-left: 10%;
+    margin-left: 9.5%;
 }
 .grid-container .side-text .rotate-guy .rotate-guy-transparant {
 	width: 60px;
@@ -255,8 +363,8 @@ header .text-right i {
 	width: 60px;
     height: 50px;
     position: absolute;
-    top: 5px;
-    right: -5px;
+    top: 0;
+    right: -7px;
     z-index: 1;
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
@@ -470,6 +578,28 @@ input.counting-size {
 	padding: 0;
 	margin-right: 1px; 
 }
-button.increaseButton:hover, button.decreaseButton:hover {
+button.increaseButton:hover, button.decreaseButton:hover, button.close:hover {
 	color: #ff7013;
+}
+button.increaseButton {
+	border-bottom-left-radius: 4px !important;
+	border-top-left-radius: 4px !important;
+}
+div#show-img > img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	height: 220px;
+	width: 50%;
+}
+.size-color {
+	color: #ff7013 !important;
+}
+div#choose-size i:hover {
+	color: #ff7013;
+	cursor: pointer;
+}
+#ourModel {
+	width: 100%;
+	height: 350px;
 }
