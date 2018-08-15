@@ -15,11 +15,11 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/myscript.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" ng-app="ngAnimate">
 	<header class="header-class row">
 		<div class="text-left col-md-6">
-			<i class="fa fa-envelope"></i> nahid@gmail.com  
-			<i class="fa fa-phone pl-4"></i> 0123456789
+			<i class="fa fa-envelope common-color"></i> nahid@gmail.com  
+			<i class="fa fa-phone pl-4 common-color"></i> 0123456789
 		</div>
 		<div class="text-right col-md-6">
 			<i class="fa fa-facebook"></i>
@@ -55,10 +55,10 @@
 		    	<i class="fa fa-search"></i>
 		    	<i class="fa fa-user-secret"></i>
 		    	<i class="fa fa-shopping-cart"></i>
+		    	<span class="cart-input"></span>
 	    	</div>
 	  	</div>
 	</nav>
-
 	<div class="container pb-5">
 		<div class="row pt-5 pb-5">
 			<div class="col-lg-5">
@@ -82,9 +82,10 @@
 				<span style="line-height: 35px !important;">
 					We are the best seller ever been we are try accomplish anything coustomers want our 	goal is not to make money but rather than have a beautiful smile from you. and good feedback after you got your desierable product
 				</span>
-				<br><br><br>	
+				<br>
+				<br>
 				<div style="line-height: 34px !important;" class="row pt-4 pb-4 size-determination">
-					<div class="col-lg-6 col-sm-6 col-xl-12 pt-1">
+					<div id="choose-size" class="col-lg-6 col-sm-6 col-xl-12 pt-1">
 						Choos Size: &nbsp; 
 						<i>S</i> &nbsp;- &nbsp;
 						<i>M</i> &nbsp;- &nbsp;
@@ -97,6 +98,13 @@
 						<input type="number" min="0" value="0" name="co" class="btn counting-size" > 
 						<button class="btn decreaseButton">-</button>
 					</div>
+				</div><br>
+				<div style="height: auto;width: auto" class="thumbnail p-3">
+					<h5 style="padding-left: 10px"><b class="common-color">Price Filter</b></h5>
+					<div style="width:auto;">
+  						<input style="width:100%;" type="range" min=0 max=120 step=1 value=50 id="range2">
+					</div>
+					<div style="color: white;font-weight: bold;width: 100%;" class="pt-3 mt-5 btn btn-larg btn-danger disabled" id="demo"></div>
 				</div>
 				<div class="row pt-4">
 					<div class="pr-3 pt-4 col-sm-6">
@@ -106,7 +114,71 @@
 						<i style="font-size: 22px;" class="fa fa-globe hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
 						<i style="font-size: 22px;" class="fa fa-heart-o hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
 						<i style="font-size: 22px;" class="fa fa-shopping-cart hoverable"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-						<button class="order-button btn-lg">Order Now</button>
+						<button class="order-button btn-lg" data-toggle="modal">Order Now</button>
+						<div class="modal fade" id="orderModel" role="dialog">
+						    <div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h4 class="modal-title">Your Order</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+									<div class="modal-body">
+										<div id="show-img" class="form-group col-sm-6 col-xs-12">
+											<img src="images/longJacketMain.png" alt="Your Product's Image">
+										</div>
+										<div class="form-group col-sm-6 col-xs-12">
+											<h4>Price</h4>
+											<span class="form-control price-show"></span>
+											<h4>Size</h4>
+											<span class="form-control size-show"></span>
+											<h4>Quantity</h4>
+											<span class="form-control quantity-show"></span>
+										</div>
+										<div style="clear: both;" class="form-group">
+											<label for="name">Name:</label>
+											<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+    									</div>
+										<div class="form-group">
+											<label for="email">Email:</label>
+											<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    									</div>
+										<div class="form-group">
+											<label for="pwd">Password:</label>
+											<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+										</div>
+										<div class="form-group">
+											<label for="address">Address:</label>
+											<input type="password" class="form-control" id="address" placeholder="Enter your address" name="address">
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="submit" class="btn btn-warning col-sm-6">
+											Confirm Order
+										</button>
+										<button type="button" class="btn btn-danger col-sm-6" data-dismiss="modal">
+											Cancel Order
+										</button>
+									</div>
+								</div>
+						    </div>
+					  	</div>
+					  	<div class="modal fade" id="orderAlert">
+							<div class="modal-dialog modal-dialog-centered">
+							  	<div class="modal-content">
+								    <div class="modal-header">
+								    	<h1>Oops...!</h1>
+								    	<button type="button" class="close" data-dismiss="modal">&times;</button>
+								    </div>
+								    <div style="color: red;" id="modal-body" class="modal-body">
+								    </div>
+								    <div class="modal-footer">
+							      		<button type="button" class="btn btn-danger" data-dismiss="modal">
+							      			Close
+							      		</button>
+								    </div>
+						  		</div>
+							</div>
+						</div>
 					</div>
 				</div>	
 			</div>
@@ -124,7 +196,7 @@
 						<p><strong>Reebok Track Jacket</strong></p>
 						<p><b class="common-color">100$</b></p>
 					</div>
-					<div class="hover-caption">
+					<div class="hover-caption product-hover-caption">
 						<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
 						<p>Sizes : x - m - l - xl</p>
 						<i style="color: #e94650" class="fa fa-circle"></i>
@@ -145,7 +217,7 @@
 						<p><strong>Reebok Track Jacket</strong></p>
 						<p><b class="common-color">100$</b></p>
 					</div>
-					<div class="hover-caption">
+					<div class="hover-caption product-hover-caption">
 						<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
 						<p>Sizes : x - m - l - xl</p>
 						<i style="color: #e94650" class="fa fa-circle"></i>
@@ -166,7 +238,7 @@
 						<p><strong>Reebok Track Jacket</strong></p>
 						<p><b class="common-color">100$</b></p>
 					</div>
-					<div class="hover-caption">
+					<div class="hover-caption product-hover-caption">
 						<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
 						<p>Sizes : x - m - l - xl</p>
 						<i style="color: #e94650" class="fa fa-circle"></i>
@@ -187,7 +259,7 @@
 						<p><strong>Reebok Track Jacket</strong></p>
 						<p><b class="common-color">100$</b></p>
 					</div>
-					<div class="hover-caption">
+					<div class="hover-caption product-hover-caption">
 						<p><strong style="color: #ff7013;">Reebok Track Jacket</strong></p>
 						<p>Sizes : x - m - l - xl</p>
 						<i style="color: #e94650" class="fa fa-circle"></i>
@@ -237,12 +309,11 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 			</div>
 		</div>
-
 		<div class="row pt-5 mt-5">
 			<div class="col-sm-4">
 				<div class="thumbnail mini-card">
 					<div class="row">
-						<div class="col-sm-4">		
+						<div class="col-sm-4 hi">		
 							<img class="p-5 wow" src="images/Biker_jacket.png" alt="Biker jacket">
 						</div>
 						<div class="col-xl-8 col-lg-8 col-sm-12 col-xm-12 col-md-12 pt-5 Biker_default-caption">
@@ -253,16 +324,15 @@
 									<li class="fa fa-star-o common-color"></li>
 									<li class="fa fa-star-o common-color"></li>
 									<li class="fa fa-star-o common-color"></li>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a class="common-color" href="product_page.html">100$</a>
+									<span class="common-color">100$</span>
 								</ul>		
-								
 							</div>
 							<div class="row ml-4 pl-4 pt-4 pr-5">
     							<div class="col-sm-3">
     								<a href="hot"><i class="fa fa-shopping-cart change-icon"></i></a>
 								</div>
 								<div class="col-sm-9">
-									<p><b class="common-color">Add to chart</b></p>
+									<p><b class="common-color add-cart">Add to chart</b></p>
 								</div>
     						</div>
 						</div>
@@ -283,7 +353,7 @@
 									<li class="fa fa-star-o common-color"></li>
 									<li class="fa fa-star-o common-color"></li>
 									<li class="fa fa-star-o common-color"></li>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a class="common-color" href="product_page.html">100$</a>
+									<span class="common-color">100$</span>
 								</ul>
 							</div>
 							<div class="row ml-4 pl-4 pt-4 pr-5">
@@ -291,7 +361,7 @@
     								<i class="fa fa-shopping-cart change-icon"><a href="#"></a></i>
 								</div>
 								<div class="col-sm-9">
-									<p><b class="common-color">Add to chart</b></p>
+									<p><b class="common-color add-cart">Add to chart</b></p>
 								</div>
     						</div>
 						</div>
@@ -320,7 +390,7 @@
     								<i class="fa fa-shopping-cart change-icon"><a href="#"></a></i>
 								</div>
 								<div class="col-sm-9">
-									<p><b class="common-color">Add to chart</b></p>
+									<p><b class="common-color add-cart">Add to chart</b></p>
 								</div>
     						</div>
 						</div>
